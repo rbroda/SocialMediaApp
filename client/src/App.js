@@ -10,6 +10,7 @@ import MenuBar from "./components/MenuBar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import SinglePost from "./pages/SinglePost";
 import AuthRoute from "./util/AuthRoute";
 
 const App = () => {
@@ -38,6 +39,7 @@ const App = () => {
                 </AuthRoute>
               }
             />
+            <Route exact path="/posts/:postId" element={<SinglePost />} />
           </Routes>
         </Container>
       </Router>
