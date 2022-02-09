@@ -13,7 +13,6 @@ const SinglePost = (props) => {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
   const { postId } = useParams();
-  console.log(postId);
 
   const { data: { getPost } = {} } = useQuery(FETCH_POST_QUERY, {
     variables: {

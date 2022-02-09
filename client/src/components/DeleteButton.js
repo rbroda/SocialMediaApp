@@ -12,12 +12,9 @@ const DeleteButton = ({ postId, callback }) => {
     update(cache) {
       setConfirmOpen(false);
 
-      console.log(postId);
-
       const { getPosts } = cache.readQuery({
         query: FETCH_POSTS_QUERY,
       });
-      // data.getPosts = data.getPosts.filter((p) => p.id !== postId);
       cache.writeQuery({
         query: FETCH_POSTS_QUERY,
         data: { getPosts: getPosts.filter((p) => p.id !== postId) },
